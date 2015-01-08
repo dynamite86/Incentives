@@ -2,9 +2,8 @@ import QtQuick 2.4
 import QtQuick.Controls 1.2
 import QtQuick.Window 2.0
 
-Window{
+ApplicationWindow{
     id:      mainWnd
-    flags:   Qt.Tool
     title:   "Incentives"
     visible: true
 
@@ -182,6 +181,7 @@ Window{
                         textArea_log.append(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + qsTr(" incentive 1 enabled"))
                         incentive1.visible  = true
                         incentive1IsEnabled = true
+                        mainWnd.update()
                     }
                 }else{
                     incentive1FramesCount = 0
@@ -190,6 +190,7 @@ Window{
                         textArea_log.append(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + qsTr(" incentive 1 disabled"))
                         incentive1.visible  = false
                         incentive1IsEnabled = false
+                        mainWnd.update()
                     }
                 }
                 incentive1FramesCount++
@@ -200,6 +201,7 @@ Window{
                         textArea_log.append(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + qsTr(" incentive 2 enabled"))
                         incentive2.visible  = true
                         incentive2IsEnabled = true
+                        mainWnd.update()
                     }
                 }else{
                     incentive2FramesCount = 0
@@ -208,6 +210,7 @@ Window{
                         textArea_log.append(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + qsTr(" incentive 2 disabled"))
                         incentive2.visible  = false
                         incentive2IsEnabled = false
+                        mainWnd.update()
                     }
                 }
                 incentive2FramesCount++
