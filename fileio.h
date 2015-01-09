@@ -24,13 +24,11 @@ public:
     explicit FileIO(QObject *parent = 0);
     ~FileIO();
 
-    Q_INVOKABLE QString read();
-    Q_INVOKABLE bool write(const QString& data);
-
-    QString source() const;
-
 public slots:
+    QString source() const;
     void setSource(const QString &source);
+    QString read();
+    bool write(const QString& data);
 
 signals:
     void sourceChanged(const QString& source);

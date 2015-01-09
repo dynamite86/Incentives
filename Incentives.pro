@@ -3,7 +3,8 @@ TEMPLATE  = app
 DESTDIR   = $$PWD
 
 SOURCES += main.cpp \
-    fileio.cpp
+    FlickerItem.cpp \
+    FileIO.cpp
 
 DISTFILES += qml/main.qml \
              win32.rc
@@ -11,4 +12,5 @@ DISTFILES += qml/main.qml \
 RC_FILE = win32.rc
 
 HEADERS += \
-    fileio.h
+    FlickerItem.h \
+    FileIO.h

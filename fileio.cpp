@@ -1,4 +1,4 @@
-#include "fileio.h"
+#include "FileIO.h"
 
 QString FileIO::source() const
 {
