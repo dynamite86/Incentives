@@ -14,7 +14,6 @@ private:
 private:
     uint pFramesCount;       //счетчик кадров
     uint pFramesPackageSize; //размер пакета кадров, в течении которого виден/скрыт стимул
-    bool pVisible;           //флаг видимости стимула
     bool pRunning;
 
 public:

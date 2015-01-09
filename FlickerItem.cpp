@@ -8,16 +8,14 @@ QSGNode *FlickerItem::updatePaintNode(QSGNode *oldNode, UpdatePaintNodeData *dat
     if(pRunning){
         pFramesCount++;
         if(pFramesCount < pFramesPackageSize){
-            if(!pVisible){
+            if(!isVisible()){
                 setVisible(true);
-                pVisible = true;
                 qDebug() << QString(QTime::currentTime().toString("[hh:mm:ss:zzz] \'") + this->objectName() + "\' visible");
             }
         }else{
             pFramesCount = 0;
-            if(pVisible){
+            if(isVisible()){
                 setVisible(false);
-                pVisible = false;
                 qDebug() << QString(QTime::currentTime().toString("[hh:mm:ss:zzz] \'") + this->objectName() + "\' invisible");
             }
         }
@@ -29,7 +27,6 @@ QSGNode *FlickerItem::updatePaintNode(QSGNode *oldNode, UpdatePaintNodeData *dat
 FlickerItem::FlickerItem()
 {
     setFlag(ItemHasContents);
-    pVisible           = false;
     pFramesCount       = 0;
     pFramesPackageSize = 0;
 }
@@ -54,10 +51,9 @@ void FlickerItem::start()
 
 void FlickerItem::stop()
 {
-    pRunning = false;
-    qDebug() << QString(QTime::currentTime().toString("!!! [hh:mm:ss:zzz] ") + "Flicker was stopped");
+    pRunning     = false;
     pFramesCount = 0;
-    pVisible = true;
+    qDebug() << QString(QTime::currentTime().toString("!!! [hh:mm:ss:zzz] ") + "Flicker was stopped");
 }
 
 bool FlickerItem::isRunning() const
