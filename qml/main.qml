@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 1.2
 import QtQuick.Window 2.2
-import FileIO 1.0
+//import FileIO 1.0
 import FlickerItem 1.0
 
 Window{
@@ -111,7 +111,6 @@ Window{
         }
     }
 
-
     //параметры стимула №2
 //    property bool incentive2IsEnabled:  false
 //    property int incentive2FramesCount: 0
@@ -189,7 +188,7 @@ Window{
 // !!! НИЖЕРАСПОЛОЖЕННЫЙ КОД В КОНСЕРВАЦИИ :-)
 /////////////////////////////////////////////////////////////////////////////////////////
 //    FileIO{
-//        id: myFile
+//        id: logFile
 //        source: "incentives.log"
 //        onError: console.log(msg)
 //    }
@@ -201,7 +200,7 @@ Window{
 //            if(workInProcess){
 //                if(incentive1FramesCount < spinBox_visibility1.value){
 //                    if(!incentive1IsEnabled){
-//                        myFile.write(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + " incentive 1 enabled")
+//                        logFile.write(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + " incentive 1 enabled")
 //                        incentive1.visible  = true
 //                        incentive1IsEnabled = true
 //                        mainWnd.update()
@@ -211,7 +210,7 @@ Window{
 //                }else{
 //                    incentive1FramesCount = 0
 //                    if(incentive1IsEnabled){
-//                        myFile.write(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + " incentive 1 disabled")
+//                        logFile.write(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + " incentive 1 disabled")
 //                        incentive1.visible  = false
 //                        incentive1IsEnabled = false
 //                        mainWnd.update()
@@ -222,7 +221,7 @@ Window{
 
 //                if(incentive2FramesCount < spinBox_visibility2.value){
 //                    if(!incentive2IsEnabled){
-//                        myFile.write(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + " incentive 2 enabled")
+//                        logFile.write(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + " incentive 2 enabled")
 //                        incentive2.visible  = true
 //                        incentive2IsEnabled = true
 //                        mainWnd.update()
@@ -231,7 +230,7 @@ Window{
 //                }else{
 //                    incentive2FramesCount = 0
 //                    if(incentive2IsEnabled){
-//                        myFile.write(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + " incentive 2 disabled")
+//                        logFile.write(Qt.formatTime(new Date(), "[hh:mm:ss:zzz]") + " incentive 2 disabled")
 //                        incentive2.visible  = false
 //                        incentive2IsEnabled = false
 //                        mainWnd.update()

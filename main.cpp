@@ -1,7 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QtQml>
-#include "FileIO.h"
+//#include "FileIO.h"
 #include "FlickerItem.h"
 
 int main(int argc, char *argv[])
@@ -9,9 +9,9 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
-    FileIO fileIO;
-    qmlRegisterType<FileIO, 1>("FileIO", 1, 0, "FileIO");
-    engine.rootContext()->setContextProperty("fileio", &fileIO);
+//    FileIO fileIO;
+//    qmlRegisterType<FileIO, 1>("FileIO", 1, 0, "FileIO");
+//    engine.rootContext()->setContextProperty("FileIO", &fileIO);
 
     FlickerItem flickerItem;
     qmlRegisterType<FlickerItem, 1>("FlickerItem", 1, 0, "FlickerItem");
